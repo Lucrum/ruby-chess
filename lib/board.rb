@@ -25,4 +25,15 @@ class Board
   def encode_piece(piece)
     @encodings[piece]
   end
+
+  def valid_move?(piece, start_notation)
+  end
+
+  def notation_to_coords(notation)
+    [notation[0].ord - 65, notation[1].to_i - 1]
+  end
+
+  def coords_to_notation(column, row)
+    "#{(column + 65).chr}#{row + 1}"
+  end
 end
